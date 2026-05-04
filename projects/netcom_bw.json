@@ -1,0 +1,44 @@
+{
+  "project_name": "NetCom BW",
+  "description": "NetCom BW Glasfaser-Auftragsdaten mit Kundennamen und Anschlussadressen",
+  "input_dir": "input/NetCom_BW",
+  "output_dir": "output/NetCom_BW",
+  "columns": {
+    "name": "Kundename",
+    "address": null,
+    "street": "Anschlussadresse Straße"
+  },
+  "reference_files": {
+    "street_names": null
+  },
+  "date_keywords": ["datum", "termin", "hinzugefügt", "erstellt"],
+  "phone_keywords": ["telefon", "phone", "tel", "mobile", "handy", "fon"],
+  "import_export": {
+    "enabled": true,
+    "filename_suffix": "_import",
+    "separator": ";",
+    "encoding": "utf-8",
+    "bom": false,
+    "columns": [
+      {"field": "busclient",          "label": "busclient",                                          "fixed": "NetCom BW"},
+      {"field": "intkundennummer",    "label": "Kundennummer",                                       "source": "Kundennummer",                                   "type": "integer"},
+      {"field": "firstname",          "label": "Vorname",                                            "source": "Vorname"},
+      {"field": "lastname",           "label": "Nachname",                                           "source": "Nachname"},
+      {"field": "mailingzip",         "label": "Anschlusadresse PLZ",                                "source": "Anschlusadresse PLZ",                            "type": "integer"},
+      {"field": "mailingcity",        "label": "Anschlusadresse Ort",                                "source": "Anschlusadresse Ort"},
+      {"field": "mailingcitypart",    "label": "Anschlusadresse Ortsteil",                           "source": "Anschlusadresse Ortsteil"},
+      {"field": "mailingstreet",      "label": "Straßenname",                                        "source": "Straßenname"},
+      {"field": "mailinghousenr",     "label": "Hausnummer",                                         "source": "Hausnummer",                                     "type": "integer"},
+      {"field": "mailinghousenrpart", "label": "Hausnummernzusatz",                                  "source": "Hausnummernzusatz"},
+      {"field": "plotno",             "label": "Flurstück Nummer",                                   "source": null},
+      {"field": "intvertragsnummer",  "label": "Vertragsnummer",                                     "source": "Vertragsnummer",                                 "type": "integer"},
+      {"field": "contstatus",         "label": "Status",                                             "source": "Status"},
+      {"field": "contcreatedate",     "label": "Erstellt am",                                        "source": "Erstellt am",                                    "type": "date"},
+      {"field": "contdatesigned",     "label": "Datum der Auftragsstellung (Unterschrift)",          "source": "Datum der Auftragsstellung (Unterschrift)",      "type": "date"},
+      {"field": "phone",              "label": "Ansprechpartner Telefon",                            "source": "Ansprechpartner Telefon",                        "type": "integer"},
+      {"field": "email",              "label": "Ansprechpartner E-Mail",                             "source": "Ansprechpartner E-Mail"},
+      {"field": "wohn_einheiten",     "label": "Wohneinheiten",                                      "source": "Wohneinheiten",                                  "type": "integer"},
+      {"field": "description",        "label": "Konfig./Sonstiges",                                  "source": "Konfig./Sonstiges"}
+    ]
+  }
+}

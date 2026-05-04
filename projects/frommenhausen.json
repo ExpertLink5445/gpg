@@ -1,0 +1,17 @@
+{
+  "project_name": "NetCom BW – Frommenhausen",
+  "description": "NetCom BW Frommenhausen – Spalten: Name, Ort, Str.; Straßenkorrektur gegen Frommenhausen-Strassen",
+  "input_dir": "input/Generic",
+  "output_dir": "output/Generic",
+  "files": ["20251010_Frommenhausen.xlsx"],
+  "columns": {
+    "name": "Name",
+    "address": null,
+    "street": "Str."
+  },
+  "reference_files": {
+    "street_names": "input/Generic/Frommenhausen-Strassen.xlsx"
+  },
+  "date_keywords": ["datum", "termin", "hinzugefügt", "erstellt", "plantermin", "bestätigt"],
+  "phone_keywords": ["telefon", "phone", "tel", "mobile", "handy", "fon"]
+}

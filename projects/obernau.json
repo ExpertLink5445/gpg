@@ -1,0 +1,16 @@
+{
+  "project_name": "NetCom BW – Obernau",
+  "description": "NetCom BW Obernau – Spalten: Name, straße, Ort",
+  "input_dir": "input/NetCom_BW",
+  "output_dir": "output/NetCom_BW",
+  "columns": {
+    "name": "Name",
+    "address": null,
+    "street": "straße"
+  },
+  "reference_files": {
+    "street_names": null
+  },
+  "date_keywords": ["datum", "termin", "hinzugefügt", "erstellt"],
+  "phone_keywords": ["telefon", "phone", "tel", "mobile", "handy", "fon"]
+}

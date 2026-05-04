@@ -1,0 +1,74 @@
+{
+  "project_name": "Westnetz",
+  "description": "Westnetz Geschäftspartner-Daten – Namenstrennung + GEE/Standorte-Export",
+  "input_dir": "input/Westnetz",
+  "output_dir": "output/Westnetz",
+  "columns": {
+    "name": "Geschäftspartner",
+    "address": null,
+    "street": "DISABLED"
+  },
+  "reference_files": {
+    "street_names": null
+  },
+  "date_keywords": [],
+  "phone_keywords": [],
+  "exports": [
+    {
+      "filename_template": "{stem}-GEE.csv",
+      "separator": ";",
+      "encoding": "utf-8",
+      "columns": [
+        {"field": "busclient",          "fixed": "Westnetz"},
+        {"field": "intkundennummer",    "source": "Kundennummer (Geschäftspartner)"},
+        {"field": "intvertragsnummer",  "source": "Vertragsnummer"},
+        {"field": "firstname",          "source": "Vorname"},
+        {"field": "lastname",           "source": "Nachname"},
+        {"field": "homephone",          "source": "Geschäftspartner Festnetz"},
+        {"field": "mobile",             "source": "Geschäftspartner Mobil"},
+        {"field": "email",              "source": "Geschäftspartner Email"},
+        {"field": "hddocsolutionup",    "source": "Vertragstyp"},
+        {"field": "plotno",             "source": "Flur/Flurstück"},
+        {"field": "mailingzip",         "source": "PLZ"},
+        {"field": "mailingcity",        "source": "Ort"},
+        {"field": "mailingcitypart",    "source": "Technisches Projekt (Anschlusspunkt)", "derived": "split_last:-"},
+        {"field": "mailingstreet",      "source": "Straße"},
+        {"field": "mailinghousenr",     "source": "Hausnummer"},
+        {"field": "mailinghousenrpart", "source": "Zusatz"}
+      ]
+    },
+    {
+      "filename_template": "{stem}-Standorte.csv",
+      "separator": ";",
+      "encoding": "utf-8",
+      "columns": [
+        {"field": "locations_no"},
+        {"field": "auftraggeber",       "fixed": "Westnetz"},
+        {"field": "flurstueck",         "source": "Flur/Flurstück"},
+        {"field": "com_adress_id",      "source": "Adressschlüssel (Anschlusspunkt)"},
+        {"field": "lie_zip",            "source": "PLZ"},
+        {"field": "lie_city",           "source": "Ort"},
+        {"field": "lie_city_part",      "source": "Technisches Projekt (Anschlusspunkt)", "derived": "split_last:-"},
+        {"field": "lie_street",         "source": "Straße"},
+        {"field": "lie_housenoonly",    "source": "Hausnummer"},
+        {"field": "lie_housenoonlyext", "source": "Zusatz"},
+        {"field": "wohneinheiten",      "source": "Wohneinheiten (Anschlusspunkt)",                                   "type": "integer"},
+        {"field": "geweinheiten",       "source": "Geschäftseinheiten (Anschlusspunkt)",                                "type": "integer"},
+        {"field": "loc_nr_residentunit", "source": "Anzahl Wohn- und Geschäftseinheiten (Kundenangabe)",                 "type": "integer"},
+        {"field": "cf_1277",            "source": "GEE-Typ"},
+        {"field": "cf_1285",            "source": "GEE Ansprechpartner Name (Contact)"},
+        {"field": "cf_1287",            "source": "GEE Ansprechpartner Email (Contact)"},
+        {"field": "cf_1289",            "source": "GEE Ansprechpartner Telefon (Contact)"},
+        {"field": "cf_1291",            "source": "GEE Ansprechpartner Telefon Mobil (Contact)"},
+        {"field": "cf_1293",            "source": "GEE Ansprechpartner Postleitzahl (Contact)"},
+        {"field": "cf_1295",            "source": "GEE Ansprechpartner Ort (Contact)"},
+        {"field": "cf_1297",            "source": "GEE Ansprechpartner Straße (Contact)"},
+        {"field": "cf_1299",            "source": "GEE Ansprechpartner Hausnummer (Contact)"},
+        {"field": "cf_1301",            "source": "GEE Ansprechpartner Adresszusatz (Contact)"},
+        {"field": "cf_1265",            "source": "Baufreigabe NE3"},
+        {"field": "cf_1269",            "source": "Bauauftrag"},
+        {"field": "cf_1267",            "source": "Baufreigabe NE4"}
+      ]
+    }
+  ]
+}

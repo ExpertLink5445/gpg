@@ -1,0 +1,16 @@
+{
+  "project_name": "Generic",
+  "description": "Generisches Projekt mit automatischer Spaltenerkennung (Keyword-basiert)",
+  "input_dir": "input/Generic",
+  "output_dir": "output/Generic",
+  "columns": {
+    "name": null,
+    "address": null,
+    "street": null
+  },
+  "reference_files": {
+    "street_names": null
+  },
+  "date_keywords": ["datum", "termin", "hinzugefügt", "erstellt"],
+  "phone_keywords": ["telefon", "phone", "tel", "mobile", "handy", "fon"]
+}
