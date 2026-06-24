@@ -34,7 +34,7 @@ INTERNATIONAL_FIRST_NAMES = {
     'henning', 'henri', 'henrik', 'henry', 'herbert', 'hermann', 'heribert', 'hilmar', 'hinrich',
     'holger', 'horst', 'hubert', 'hubertus', 'hugo',
     'ian', 'ignaz', 'igor', 'ilias', 'immanuel', 'ingo', 'ingolf', 'isaac', 'ismail', 'ivan', 'ivo',
-    'jacob', 'jakob', 'jan', 'janis', 'jann', 'jannik', 'jannis', 'jano', 'janosch', 'jared', 'jarl',
+    'jacob', 'jakob', 'jan', 'janis', 'jann', 'jannik', 'jannis', 'jano', 'janosch', 'jared', 'jarl', 'jens',
     'jarno', 'jaromir', 'jascha', 'jason', 'jean', 'jeremias', 'jeremy', 'jerome', 'jesse', 'joachim',
     'jochen', 'joe', 'joel', 'joey', 'johann', 'johannes', 'john', 'johnny', 'jonas', 'jonathan',
     'jordan', 'jorge', 'joris', 'jose', 'josef', 'joseph', 'joshua', 'josip', 'jost', 'joost',
